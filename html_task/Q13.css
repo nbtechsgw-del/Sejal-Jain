@@ -1,0 +1,17 @@
+body {
+  font-family: Arial;
+}
+
+.center {
+  text-align: center;
+}
+
+
+.blue {
+  color: blue;
+}
+
+
+#lastHeading {
+  color: yellow;
+}
