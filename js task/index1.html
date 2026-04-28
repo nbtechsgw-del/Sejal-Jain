@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mark-Sheet Calculator</title>
+    <link rel="stylesheet" href="marks_style.css">
+</head>
+<body>
+
+    <div class="container">
+        <h2>Mark-Sheet Calculator</h2>
+        
+        <div id="errorMsg" class="error-message"></div>
+        
+        <div class="calculator-box">
+            <div class="row">
+                <div class="label">Hindi</div>
+                <div class="input-cell">
+                    <input type="number" id="hindi"> 
+                    <span class="max-text">(Max : 100)</span>
+                </div>
+            </div>
+            <div class="row">
+                <div class="label">English</div>
+                <div class="input-cell">
+                    <input type="number" id="english"> 
+                    <span class="max-text">(Max : 100)</span>
+                </div>
+            </div>
+            <div class="row">
+                <div class="label">Maths</div>
+                <div class="input-cell">
+                    <input type="number" id="maths"> 
+                    <span class="max-text">(Max : 100)</span>
+                </div>
+            </div>
+            <div class="row">
+                <div class="label">Science</div>
+                <div class="input-cell">
+                    <input type="number" id="science"> 
+                    <span class="max-text">(Max : 100)</span>
+                </div>
+            </div>
+            <div class="row">
+                <div class="label">Art</div>
+                <div class="input-cell">
+                    <input type="number" id="art"> 
+                    <span class="max-text">(Max : 100)</span>
+                </div>
+            </div>
+            <div class="row last-subject">
+                <div class="label">Computer</div>
+                <div class="input-cell border-bottom">
+                    <input type="number" id="computer"> 
+                    <span class="max-text">(Max : 100)</span>
+                </div>
+            </div>
+            
+            <div class="row result-row">
+                <div class="label">Total</div>
+                <div class="input-cell border-bottom">
+                    <input type="text" id="total" readonly>
+                </div>
+            </div>
+            <div class="row result-row">
+                <div class="label">Percentage</div>
+                <div class="input-cell border-bottom">
+                    <input type="text" id="percentage" readonly>
+                </div>
+            </div>
+            <div class="row result-row">
+                <div class="label">Grade</div>
+                <div class="input-cell border-bottom">
+                    <input type="text" id="grade" class="grade-input" readonly>
+                </div>
+            </div>
+            
+            <div class="row btn-row">
+                <div class="label"></div>
+                <div class="input-cell">
+                    <button id="calcBtn">Calculate</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="marks_script.js"></script>
+</body>
+</html>
