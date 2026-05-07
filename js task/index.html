@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prime Number Generator</title>
+    
+    <!-- CSS Section: Aap is code ko style.css mein daal sakte hain -->
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 40px;
+            color: #333;
+        }
+        
+        h2 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            max-width: 500px;
+            margin: 0 auto;
+        }
+        
+        th, td {
+            border: 1px solid #333;
+            padding: 10px 15px;
+        }
+        
+        td:first-child {
+            width: 30%;
+            color: #555;
+        }
+        
+        input[type="number"] {
+            width: 120px;
+            padding: 4px;
+            border: 1px solid #aaa;
+            outline: none;
+        }
+        
+        input[type="number"]:focus {
+            border-color: #000;
+        }
+        
+        /* Number input ke side arrows hatane ke liye */
+        input[type=number]::-webkit-inner-spin-button, 
+        input[type=number]::-webkit-outer-spin-button { 
+            -webkit-appearance: none; 
+            margin: 0; 
+        }
+        input[type=number] {
+            -moz-appearance: textfield;
+        }
+        
+        textarea {
+            width: 100%;
+            height: 80px;
+            padding: 5px;
+            border: 1px solid #aaa;
+            resize: none;
+            outline: none;
+            box-sizing: border-box;
+        }
+        
+        button {
+            padding: 5px 15px;
+            border: 1px solid #555;
+            background-color: #f0f0f0;
+            cursor: pointer;
+        }
+        
+        button:hover {
+            background-color: #e0e0e0;
+        }
+
+        .error-message {
+            color: red;
+            text-align: center;
+            margin-bottom: 15px;
+            display: none;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>Prime Number Generator</h2>
+    
+    <!-- Error message dikhane ke liye -->
+    <div id="errorMsg" class="error-message"></div>
+    
+    <!-- HTML Section: Aap isse index.html ki body mein daal sakte hain -->
+    <table>
+        <tr>
+            <td>Start</td>
+            <td><input type="number" id="startNum"></td>
+        </tr>
+        <tr>
+            <td>End</td>
+            <td><input type="number" id="endNum"></td>
+        </tr>
+        <tr>
+            <td style="vertical-align: top; padding-top: 15px;">Prime Number</td>
+            <td><textarea id="primeResult" readonly></textarea></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td><button onclick="generatePrimes()">Generate</button></td>
+        </tr>
+    </table>
+
+    <!-- JavaScript Section: Aap is code ko script.js mein daal sakte hain -->
+    <script>
+        function showError(msg) {
+            const errorDiv = document.getElementById('errorMsg');
+            errorDiv.textContent = msg;
+            errorDiv.style.display = 'block';
+            setTimeout(() => {
+                errorDiv.style.display = 'none';
+            }, 3000);
+        }
+
+        function isPrime(num) {
+            if (num <= 1) return false;
+            for (let i = 2; i <= Math.sqrt(num); i++) {
+                if (num % i === 0) return false;
+            }
+            return true;
+        }
+
+        function generatePrimes() {
+            const startVal = document.getElementById('startNum').value;
+            const endVal = document.getElementById('endNum').value;
+
+            if (startVal === '' || endVal === '') {
+                showError("Kripaya Start aur End dono numbers bharein.");
+                return;
+            }
+
+            const start = parseInt(startVal);
+            const end = parseInt(endVal);
+
+            if (start > end) {
+                showError("Start number, End number se chhota hona chahiye.");
+                return;
+            }
+
+            let primes = [];
+            for (let i = start; i <= end; i++) {
+                if (isPrime(i)) {
+                    primes.push(i);
+                }
+            }
+
+            document.getElementById('primeResult').value = primes.join(', ');
+        }
+    </script>
+</body>
+</html>
