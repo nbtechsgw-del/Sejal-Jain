@@ -66,7 +66,7 @@ const Login = () => {
           Login
         </h2>
 
-        {/* EMAIL */}
+        
         <input
           type="email"
           placeholder="Enter Email"
@@ -81,7 +81,7 @@ const Login = () => {
           }}
         />
 
-        {/* PASSWORD */}
+        
         <input
           type="password"
           placeholder="Enter Password"
@@ -96,7 +96,7 @@ const Login = () => {
           }}
         />
 
-        {/* BUTTON */}
+        
         <button
           onClick={handleLogin}
           style={{
@@ -112,7 +112,7 @@ const Login = () => {
           Login
         </button>
 
-        {/* MESSAGE */}
+        
         <p style={{
           marginTop: '10px',
           fontSize: '12px',
@@ -122,7 +122,7 @@ const Login = () => {
           {message}
         </p>
 
-        {/* REGISTER Link*/}
+        
         <p style={{ textAlign: "center", marginTop: "10px" }}>
           Don't have account? <Link to="/register">Register</Link>
         </p>

@@ -27,7 +27,7 @@ const About = () => {
         Explore our collection and upgrade your wardrobe with the best styles.
       </p>
 
-      {/* EXTRA BOX */}
+      
       <div style={{
         marginTop: '30px',
         padding: '20px',

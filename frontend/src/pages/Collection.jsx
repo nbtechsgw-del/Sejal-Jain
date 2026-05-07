@@ -28,7 +28,7 @@ const Collection = ({ addToCart, search }) => {
             image={item.image}
             name={item.name}
             price={item.price}
-            addToCart={addToCart}   // ✔ IMPORTANT
+            addToCart={addToCart}   
           />
         ))}
 

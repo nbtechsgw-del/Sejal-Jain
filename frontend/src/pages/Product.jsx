@@ -32,7 +32,7 @@ const Product = ({ addToCart }) => {
               }}
             >
 
-              {/* IMAGE SAFE */}
+              
               <img
                 src={item.image?.[0] || "https://via.placeholder.com/120"}
                 width="120"
@@ -42,7 +42,7 @@ const Product = ({ addToCart }) => {
               <h3>{item.name}</h3>
               <p>₹{item.price}</p>
 
-              {/* BUTTON FIXED */}
+              
               <button
                 style={{
                   padding: "10px",
