@@ -17,6 +17,7 @@ const hotelBookingRoutes =
 
   const reviewRoutes =
   require("./routes/reviewRoutes");
+  const aiRoutes = require("./routes/aiRoutes");
 
 
 
@@ -34,6 +35,7 @@ app.use("/api/admin", adminRoutes);
 app.use("/api/package", packageRoutes);
 app.use("/api/destination", destinationRoutes);
 app.use("/api/hotel", hotelRoutes);
+app.use("/api/ai", aiRoutes);
 app.use("/api/user", userRoutes);
 app.use("/api/booking", bookingRoutes);
 app.use(

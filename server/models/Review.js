@@ -10,6 +10,16 @@ const reviewSchema = new mongoose.Schema({
     type: String,
   },
 
+  // 👇 ADD THESE
+  userId: {
+    type: mongoose.Schema.Types.ObjectId,
+    ref: "User",
+  },
+
+  userName: {
+    type: String,
+  },
+
   rating: {
     type: Number,
     required: true,

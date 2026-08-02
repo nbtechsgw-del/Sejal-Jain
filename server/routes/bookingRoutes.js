@@ -27,10 +27,20 @@ router.post("/add", async (req, res) => {
     }
 
     const booking = new Booking({
-      packageId: req.body.packageId,
-      packageName: req.body.packageName,
-      price: req.body.price,
-    });
+  packageId: req.body.packageId,
+  packageName: req.body.packageName,
+  price: req.body.price,
+
+  userId: req.body.userId,
+  userName: req.body.userName,
+
+  name: req.body.name,
+  email: req.body.email,
+  phone: req.body.phone,
+
+  travelers: req.body.travelers,
+  travelDate: req.body.travelDate,
+});
 
     await booking.save();
 
