@@ -1,0 +1,344 @@
+/* =========================================
+   ADMIN SERVICE MANAGEMENT
+========================================= */
+
+.admin-container {
+  width: 100%;
+  min-height: 100vh;
+  padding: 35px 45px;
+  background: #f5f7fb;
+  box-sizing: border-box;
+}
+
+.admin-container > h1 {
+  margin: 0 0 30px;
+  font-size: 30px;
+  font-weight: 700;
+  color: #1f2937;
+}
+
+.admin-container > h2 {
+  color: #1f2937;
+}
+
+
+/* =========================================
+   SERVICE FORM
+========================================= */
+
+.admin-form {
+  width: 100%;
+  max-width: 850px;
+  background: #ffffff;
+  padding: 30px;
+  border-radius: 14px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+  box-sizing: border-box;
+  margin-bottom: 45px;
+}
+
+.admin-form h2 {
+  margin: 0 0 25px;
+  font-size: 22px;
+  color: #111827;
+}
+
+
+/* =========================================
+   INPUTS
+========================================= */
+
+.admin-form input,
+.admin-form textarea,
+.admin-form select {
+  width: 100%;
+  padding: 13px 14px;
+  margin-bottom: 17px;
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  font-size: 14px;
+  color: #374151;
+  background: #ffffff;
+  box-sizing: border-box;
+  outline: none;
+  transition: 0.2s ease;
+}
+
+.admin-form textarea {
+  min-height: 110px;
+  resize: vertical;
+}
+
+.admin-form input:focus,
+.admin-form textarea:focus,
+.admin-form select:focus {
+  border-color: #2563eb;
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+}
+
+.admin-form input::placeholder,
+.admin-form textarea::placeholder {
+  color: #9ca3af;
+}
+
+
+/* =========================================
+   FILE INPUT
+========================================= */
+
+.admin-form input[type="file"] {
+  padding: 10px;
+  background: #f9fafb;
+  cursor: pointer;
+}
+
+
+/* =========================================
+   FORM BUTTONS
+========================================= */
+
+.form-buttons {
+  display: flex;
+  gap: 12px;
+  margin-top: 5px;
+}
+
+.save-button,
+.cancel-button {
+  border: none;
+  border-radius: 8px;
+  padding: 12px 22px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.save-button {
+  background: #2563eb;
+  color: white;
+}
+
+.save-button:hover {
+  background: #1d4ed8;
+}
+
+.cancel-button {
+  background: #e5e7eb;
+  color: #374151;
+}
+
+.cancel-button:hover {
+  background: #d1d5db;
+}
+
+
+/* =========================================
+   EXISTING SERVICES
+========================================= */
+
+.existing-title {
+  margin-bottom: 20px;
+  font-size: 23px;
+}
+
+
+/* =========================================
+   SERVICE LIST
+========================================= */
+
+.admin-service-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(330px, 1fr));
+  gap: 25px;
+}
+
+
+/* =========================================
+   SERVICE CARD
+========================================= */
+
+.admin-service-card {
+  background: #ffffff;
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: 0 5px 18px rgba(0, 0, 0, 0.07);
+  border: 1px solid #e5e7eb;
+  transition: 0.25s ease;
+}
+
+.admin-service-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.11);
+}
+
+
+/* =========================================
+   SERVICE IMAGE
+========================================= */
+
+.admin-service-card > img {
+  width: 100%;
+  height: 190px;
+  object-fit: cover;
+  display: block;
+}
+
+
+/* =========================================
+   SERVICE CONTENT
+========================================= */
+
+.admin-service-content {
+  padding: 22px;
+}
+
+.admin-service-content h3 {
+  margin: 0 0 10px;
+  font-size: 20px;
+  color: #111827;
+}
+
+.admin-service-content p {
+  margin: 9px 0;
+  font-size: 14px;
+  line-height: 1.5;
+  color: #6b7280;
+}
+
+.admin-service-content p strong {
+  color: #374151;
+}
+
+
+/* =========================================
+   STATUS
+========================================= */
+
+.status-active,
+.status-inactive {
+  display: inline-block;
+  padding: 4px 10px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.status-active {
+  color: #166534;
+  background: #dcfce7;
+}
+
+.status-inactive {
+  color: #991b1b;
+  background: #fee2e2;
+}
+
+
+/* =========================================
+   ACTION BUTTONS
+========================================= */
+
+.admin-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 9px;
+  margin-top: 18px;
+  padding-top: 17px;
+  border-top: 1px solid #e5e7eb;
+}
+
+.admin-actions button {
+  border: none;
+  padding: 9px 13px;
+  border-radius: 7px;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.edit-btn {
+  background: #eff6ff;
+  color: #1d4ed8;
+}
+
+.edit-btn:hover {
+  background: #dbeafe;
+}
+
+.delete-btn {
+  background: #fef2f2;
+  color: #dc2626;
+}
+
+.delete-btn:hover {
+  background: #fee2e2;
+}
+
+.active-btn {
+  background: #f3f4f6;
+  color: #374151;
+}
+
+.active-btn:hover {
+  background: #e5e7eb;
+}
+
+
+/* =========================================
+   RESPONSIVE
+========================================= */
+
+@media (max-width: 768px) {
+
+  .admin-container {
+    padding: 25px 18px;
+  }
+
+  .admin-container > h1 {
+    font-size: 25px;
+  }
+
+  .admin-form {
+    padding: 22px;
+  }
+
+  .admin-service-list {
+    grid-template-columns: 1fr;
+  }
+
+  .form-buttons {
+    flex-direction: column;
+  }
+
+  .save-button,
+  .cancel-button {
+    width: 100%;
+  }
+
+}
+
+@media (max-width: 480px) {
+
+  .admin-container {
+    padding: 20px 12px;
+  }
+
+  .admin-form {
+    padding: 18px;
+  }
+
+  .admin-service-content {
+    padding: 18px;
+  }
+
+  .admin-actions {
+    flex-direction: column;
+  }
+
+  .admin-actions button {
+    width: 100%;
+  }
+
+}

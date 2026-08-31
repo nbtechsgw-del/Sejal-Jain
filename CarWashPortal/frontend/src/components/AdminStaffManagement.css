@@ -1,0 +1,453 @@
+/* =========================================
+   STAFF MANAGEMENT PAGE
+========================================= */
+
+.admin-container {
+  min-height: 100vh;
+  padding: 35px 45px;
+  background: #f5f7fb;
+  box-sizing: border-box;
+}
+
+
+/* =========================================
+   PAGE HEADER
+========================================= */
+
+.staff-page-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+  gap: 20px;
+}
+
+.staff-page-header h1 {
+  margin: 0 0 7px;
+  font-size: 30px;
+  color: #1f2937;
+}
+
+.staff-page-header p {
+  margin: 0;
+  color: #6b7280;
+  font-size: 14px;
+}
+
+
+/* =========================================
+   ADD STAFF BUTTON
+========================================= */
+
+.add-staff-btn {
+  border: none;
+  background: #2563eb;
+  color: white;
+  padding: 12px 22px;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.add-staff-btn:hover {
+  background: #1d4ed8;
+}
+
+
+/* =========================================
+   STAFF FORM CARD
+========================================= */
+
+.staff-form-card {
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 14px;
+  padding: 28px;
+  margin-bottom: 35px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.07);
+}
+
+.staff-form-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 25px;
+}
+
+.staff-form-header h2 {
+  margin: 0;
+  color: #111827;
+  font-size: 21px;
+}
+
+.staff-form-header button {
+  border: none;
+  background: #f3f4f6;
+  color: #4b5563;
+  width: 34px;
+  height: 34px;
+  border-radius: 7px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.staff-form-header button:hover {
+  background: #e5e7eb;
+}
+
+
+/* =========================================
+   FORM GRID
+========================================= */
+
+.staff-form-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+.staff-form-grid > div {
+  display: flex;
+  flex-direction: column;
+}
+
+.staff-form-grid label {
+  margin-bottom: 7px;
+  font-size: 14px;
+  font-weight: 600;
+  color: #374151;
+}
+
+.staff-form-grid input,
+.staff-form-grid select {
+  width: 100%;
+  padding: 12px 13px;
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  font-size: 14px;
+  box-sizing: border-box;
+  outline: none;
+  background: #ffffff;
+  color: #374151;
+  transition: 0.2s ease;
+}
+
+.staff-form-grid input:focus,
+.staff-form-grid select:focus {
+  border-color: #2563eb;
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+}
+
+
+/* =========================================
+   FORM ACTIONS
+========================================= */
+
+.staff-form-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 12px;
+  margin-top: 25px;
+  padding-top: 20px;
+  border-top: 1px solid #e5e7eb;
+}
+
+.cancel-btn,
+.save-staff-btn {
+  border: none;
+  padding: 11px 20px;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.cancel-btn {
+  background: #e5e7eb;
+  color: #374151;
+}
+
+.cancel-btn:hover {
+  background: #d1d5db;
+}
+
+.save-staff-btn {
+  background: #2563eb;
+  color: white;
+}
+
+.save-staff-btn:hover {
+  background: #1d4ed8;
+}
+
+
+/* =========================================
+   STAFF LIST
+========================================= */
+
+.staff-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+  gap: 24px;
+}
+
+
+/* =========================================
+   STAFF CARD
+========================================= */
+
+.staff-card {
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 14px;
+  padding: 22px;
+  box-shadow: 0 5px 18px rgba(0, 0, 0, 0.07);
+  transition: 0.25s ease;
+}
+
+.staff-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.11);
+}
+
+
+/* =========================================
+   STAFF CARD HEADER
+========================================= */
+
+.staff-card-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding-bottom: 18px;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.staff-avatar {
+  width: 48px;
+  height: 48px;
+  min-width: 48px;
+  border-radius: 50%;
+  background: #eff6ff;
+  color: #2563eb;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.staff-card-header h2 {
+  margin: 0 0 4px;
+  font-size: 18px;
+  color: #111827;
+}
+
+.staff-card-header span {
+  font-size: 12px;
+  color: #6b7280;
+}
+
+
+/* =========================================
+   STAFF STATUS
+========================================= */
+
+.staff-status {
+  margin-left: auto;
+  padding: 5px 10px;
+  border-radius: 20px;
+  font-size: 11px !important;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+.staff-status.available {
+  background: #dcfce7;
+  color: #166534;
+}
+
+.staff-status.unavailable {
+  background: #fee2e2;
+  color: #991b1b;
+}
+
+
+/* =========================================
+   STAFF DETAILS
+========================================= */
+
+.staff-details {
+  display: flex;
+  flex-direction: column;
+  gap: 13px;
+  padding: 20px 0;
+}
+
+.staff-details > div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 15px;
+}
+
+.staff-details span {
+  color: #6b7280;
+  font-size: 13px;
+}
+
+.staff-details strong {
+  color: #374151;
+  font-size: 13px;
+  text-align: right;
+  word-break: break-word;
+}
+
+
+/* =========================================
+   STAFF ACTIONS
+========================================= */
+
+.staff-actions {
+  display: flex;
+  gap: 9px;
+  padding-top: 17px;
+  border-top: 1px solid #e5e7eb;
+}
+
+.staff-actions button {
+  flex: 1;
+  border: none;
+  padding: 10px 8px;
+  border-radius: 7px;
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.edit-staff-btn {
+  background: #eff6ff;
+  color: #1d4ed8;
+}
+
+.edit-staff-btn:hover {
+  background: #dbeafe;
+}
+
+.availability-btn {
+  background: #f3f4f6;
+  color: #374151;
+}
+
+.availability-btn:hover {
+  background: #e5e7eb;
+}
+
+.delete-staff-btn {
+  background: #fef2f2;
+  color: #dc2626;
+}
+
+.delete-staff-btn:hover {
+  background: #fee2e2;
+}
+
+
+/* =========================================
+   NO STAFF
+========================================= */
+
+.no-staff {
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 14px;
+  padding: 55px 30px;
+  text-align: center;
+  box-shadow: 0 5px 18px rgba(0, 0, 0, 0.06);
+}
+
+.no-staff h2 {
+  margin: 0 0 8px;
+  color: #1f2937;
+}
+
+.no-staff p {
+  margin: 0;
+  color: #6b7280;
+  font-size: 14px;
+}
+
+
+/* =========================================
+   RESPONSIVE
+========================================= */
+
+@media (max-width: 768px) {
+
+  .admin-container {
+    padding: 25px 18px;
+  }
+
+  .staff-page-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .add-staff-btn {
+    width: 100%;
+  }
+
+  .staff-form-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .staff-list {
+    grid-template-columns: 1fr;
+  }
+
+}
+
+
+@media (max-width: 480px) {
+
+  .admin-container {
+    padding: 20px 12px;
+  }
+
+  .staff-form-card {
+    padding: 20px;
+  }
+
+  .staff-card {
+    padding: 18px;
+  }
+
+  .staff-card-header {
+    flex-wrap: wrap;
+  }
+
+  .staff-status {
+    margin-left: 60px;
+  }
+
+  .staff-actions {
+    flex-direction: column;
+  }
+
+  .staff-actions button {
+    width: 100%;
+  }
+
+  .staff-form-actions {
+    flex-direction: column;
+  }
+
+  .cancel-btn,
+  .save-staff-btn {
+    width: 100%;
+  }
+
+}

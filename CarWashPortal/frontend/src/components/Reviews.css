@@ -1,0 +1,153 @@
+/* =========================
+   REVIEW FORM
+========================= */
+
+.review-form-card {
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 28px;
+  margin-top: 25px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+  border: 1px solid #e5e7eb;
+}
+
+.review-form-header h2 {
+  margin: 0;
+  font-size: 24px;
+  color: #1f2937;
+}
+
+.review-form-header p {
+  margin-top: 6px;
+  color: #6b7280;
+}
+
+
+/* ERROR */
+
+.review-error {
+  margin: 15px 0;
+  padding: 12px 15px;
+  border-radius: 8px;
+  background: #fee2e2;
+  color: #b91c1c;
+}
+
+
+/* RATING */
+
+.rating-section {
+  margin-top: 25px;
+}
+
+.rating-section label,
+.review-input-group label {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 10px;
+  color: #374151;
+}
+
+.star-rating {
+  display: flex;
+  gap: 5px;
+}
+
+.star {
+  border: none;
+  background: transparent;
+  font-size: 34px;
+  cursor: pointer;
+  color: #d1d5db;
+  padding: 0;
+  transition: 0.2s;
+}
+
+.star:hover {
+  transform: scale(1.1);
+}
+
+.star.active {
+  color: #f59e0b;
+}
+
+.rating-text {
+  display: block;
+  margin-top: 5px;
+  color: #6b7280;
+  font-size: 14px;
+}
+
+
+/* TEXTAREA */
+
+.review-input-group {
+  margin-top: 25px;
+}
+
+.review-input-group textarea {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 13px;
+  border: 1px solid #d1d5db;
+  border-radius: 10px;
+  resize: vertical;
+  font-size: 15px;
+  font-family: inherit;
+  outline: none;
+}
+
+.review-input-group textarea:focus {
+  border-color: #2563eb;
+}
+
+.review-input-group small {
+  display: block;
+  text-align: right;
+  margin-top: 5px;
+  color: #9ca3af;
+}
+
+
+/* BUTTONS */
+
+.review-form-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 12px;
+  margin-top: 20px;
+}
+
+.review-submit-btn,
+.review-cancel-btn {
+  border: none;
+  padding: 11px 22px;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.review-submit-btn {
+  background: #2563eb;
+  color: white;
+}
+
+.review-submit-btn:hover {
+  background: #1d4ed8;
+}
+
+.review-cancel-btn {
+  background: #e5e7eb;
+  color: #374151;
+}
+
+.review-cancel-btn:hover {
+  background: #d1d5db;
+}
+
+.review-submit-btn:disabled,
+.review-cancel-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}

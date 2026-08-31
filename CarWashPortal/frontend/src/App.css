@@ -1,0 +1,706 @@
+/* =========================
+   GLOBAL
+========================= */
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: #f5f7fb;
+  color: #1e293b;
+  font-family: "Segoe UI", Roboto, Arial, sans-serif;
+}
+
+
+/* =========================
+   NAVBAR
+========================= */
+
+.navbar {
+  width: 100%;
+  min-height: 72px;
+  padding: 0 42px;
+
+  background: linear-gradient(135deg, #0f172a, #172554);
+
+  color: white;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  box-shadow: 0 4px 18px rgba(15, 23, 42, 0.18);
+}
+
+.navbar h2 {
+  margin: 0;
+  color: white;
+  font-size: 23px;
+  font-weight: 700;
+  letter-spacing: 0.3px;
+}
+
+.navbar div {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.navbar button {
+  padding: 9px 18px;
+
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 8px;
+
+  background: rgba(255, 255, 255, 0.1);
+  color: white;
+
+  font-size: 14px;
+  font-weight: 600;
+
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.navbar button:hover {
+  background: white;
+  color: #172554;
+  transform: translateY(-1px);
+}
+
+
+/* =========================
+   ADMIN PAGE
+========================= */
+
+.admin-container {
+  width: 100%;
+  max-width: 1240px;
+
+  margin: 0 auto;
+  padding: 42px 30px 60px;
+}
+
+.admin-container h1 {
+  margin: 0 0 32px;
+
+  text-align: center;
+
+  color: #0f172a;
+  font-size: 32px;
+  font-weight: 700;
+  letter-spacing: -0.5px;
+}
+
+
+/* =========================
+   ADMIN FORM
+========================= */
+
+.admin-form {
+  background: white;
+
+  padding: 30px 32px;
+
+  border: 1px solid #e8edf3;
+  border-radius: 16px;
+
+  box-shadow: 0 8px 28px rgba(15, 23, 42, 0.06);
+
+  margin-bottom: 42px;
+}
+
+.admin-form h2 {
+  margin: 0 0 24px;
+
+  color: #0f172a;
+  font-size: 21px;
+  font-weight: 700;
+}
+
+
+/* Inputs */
+
+.admin-form input,
+.admin-form textarea,
+.admin-form select {
+  width: 100%;
+
+  padding: 12px 14px;
+  margin-bottom: 15px;
+
+  border: 1px solid #d9e0e8;
+  border-radius: 8px;
+
+  background: #fff;
+  color: #1e293b;
+
+  font-size: 14px;
+
+  outline: none;
+
+  transition: all 0.2s ease;
+}
+
+.admin-form input::placeholder,
+.admin-form textarea::placeholder {
+  color: #94a3b8;
+}
+
+.admin-form input:focus,
+.admin-form textarea:focus,
+.admin-form select:focus {
+  border-color: #2563eb;
+
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+}
+
+.admin-form textarea {
+  min-height: 105px;
+  resize: vertical;
+}
+
+
+/* Form Button */
+
+.admin-form button {
+  padding: 12px 26px;
+
+  border: none;
+  border-radius: 8px;
+
+  background: #2563eb;
+  color: white;
+
+  font-size: 14px;
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition: all 0.2s ease;
+}
+
+.admin-form button:hover {
+  background: #1d4ed8;
+  transform: translateY(-1px);
+
+  box-shadow: 0 5px 12px rgba(37, 99, 235, 0.25);
+}
+
+
+/* =========================
+   SERVICE GRID
+========================= */
+
+.admin-service-list {
+  display: grid;
+
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+
+  gap: 24px;
+}
+
+
+/* =========================
+   SERVICE CARD
+========================= */
+
+.admin-service-card {
+  background: white;
+
+  border: 1px solid #e7ebf0;
+  border-radius: 15px;
+
+  overflow: hidden;
+
+  box-shadow: 0 5px 18px rgba(15, 23, 42, 0.06);
+
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.admin-service-card:hover {
+  transform: translateY(-4px);
+
+  box-shadow: 0 12px 28px rgba(15, 23, 42, 0.11);
+}
+
+
+/* Service Image */
+
+.admin-service-card img {
+  width: 100%;
+  height: 185px;
+
+  object-fit: cover;
+
+  background: #eef2f7;
+}
+
+
+/* Service Content */
+
+.admin-service-content {
+  padding: 20px;
+}
+
+.admin-service-content h3 {
+  margin: 0 0 10px;
+
+  color: #0f172a;
+
+  font-size: 19px;
+  font-weight: 700;
+}
+
+.admin-service-content p {
+  margin: 7px 0;
+
+  color: #64748b;
+
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+
+/* =========================
+   ADMIN BUTTONS
+========================= */
+
+.admin-buttons {
+  display: flex;
+
+  gap: 9px;
+
+  margin-top: 18px;
+}
+
+.admin-buttons button {
+  flex: 1;
+
+  padding: 10px 8px;
+
+  border: none;
+  border-radius: 7px;
+
+  color: white;
+
+  font-size: 13px;
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition: all 0.2s ease;
+}
+
+
+/* Edit */
+
+.edit-btn {
+  background: #2563eb;
+}
+
+.edit-btn:hover {
+  background: #1d4ed8;
+  transform: translateY(-1px);
+}
+
+
+/* Delete */
+
+.delete-btn {
+  background: #ef4444;
+}
+
+.delete-btn:hover {
+  background: #dc2626;
+  transform: translateY(-1px);
+}
+
+
+/* Active */
+
+.active-btn {
+  background: #16a34a;
+}
+
+.active-btn:hover {
+  background: #15803d;
+  transform: translateY(-1px);
+}
+
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 950px) {
+  .admin-service-list {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .navbar {
+    padding: 0 25px;
+  }
+}
+
+
+@media (max-width: 650px) {
+  .navbar {
+    min-height: auto;
+    padding: 16px 20px;
+
+    flex-direction: column;
+    gap: 14px;
+  }
+
+  .navbar h2 {
+    font-size: 20px;
+  }
+
+  .admin-container {
+    padding: 28px 16px 45px;
+  }
+
+  .admin-container h1 {
+    font-size: 27px;
+  }
+
+  .admin-form {
+    padding: 22px 18px;
+  }
+
+  .admin-service-list {
+    grid-template-columns: 1fr;
+  }
+
+  .admin-buttons {
+    flex-direction: row;
+  }
+
+  
+}
+
+/* =========================
+   SERVICE DETAILS PAGE
+========================= */
+
+.service-details-container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 35px 25px 60px;
+}
+
+.back-btn {
+  border: none;
+  background: transparent;
+  color: #2563eb;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  padding: 8px 0;
+  margin-bottom: 20px;
+}
+
+.back-btn:hover {
+  color: #1d4ed8;
+}
+
+.service-details-card {
+  background: white;
+  border: 1px solid #e5e7eb;
+  border-radius: 18px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(15, 23, 42, 0.08);
+}
+
+.service-details-image {
+  width: 100%;
+  height: 360px;
+  object-fit: cover;
+}
+
+.service-details-content {
+  padding: 32px;
+}
+
+.service-details-content h1 {
+  margin: 0 0 12px;
+  color: #0f172a;
+  font-size: 32px;
+}
+
+.service-description {
+  color: #64748b;
+  font-size: 16px;
+  line-height: 1.7;
+  margin-bottom: 28px;
+}
+
+.service-info {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 15px;
+  margin-bottom: 32px;
+}
+
+.service-info div {
+  background: #f8fafc;
+  border: 1px solid #e5e7eb;
+  border-radius: 10px;
+  padding: 16px;
+}
+
+.service-info span {
+  display: block;
+  color: #64748b;
+  font-size: 13px;
+  margin-bottom: 6px;
+}
+
+.service-info strong {
+  color: #0f172a;
+  font-size: 15px;
+}
+
+.service-details-content h2 {
+  margin: 28px 0 12px;
+  color: #0f172a;
+  font-size: 20px;
+}
+
+.feature-list {
+  padding-left: 20px;
+  color: #475569;
+  line-height: 1.9;
+}
+
+.review-box,
+.schedule {
+  background: #f8fafc;
+  border: 1px solid #e5e7eb;
+  border-radius: 10px;
+  padding: 16px;
+  color: #475569;
+}
+
+.review-box p {
+  margin-top: 8px;
+}
+
+.schedule p {
+  margin: 0 0 5px;
+}
+
+.book-service-btn {
+  width: 100%;
+  margin-top: 30px;
+  padding: 14px;
+
+  border: none;
+  border-radius: 9px;
+
+  background: #2563eb;
+  color: white;
+
+  font-size: 16px;
+  font-weight: 700;
+
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.book-service-btn:hover {
+  background: #1d4ed8;
+  transform: translateY(-1px);
+}
+
+.book-service-btn:disabled {
+  background: #94a3b8;
+  cursor: not-allowed;
+  transform: none;
+}
+
+
+/* =========================
+   SERVICE DETAILS RESPONSIVE
+========================= */
+
+@media (max-width: 800px) {
+  .service-info {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .service-details-image {
+    height: 280px;
+  }
+}
+
+@media (max-width: 500px) {
+  .service-details-container {
+    padding: 25px 15px 45px;
+  }
+
+  .service-details-content {
+    padding: 22px;
+  }
+
+  .service-details-content h1 {
+    font-size: 26px;
+  }
+
+  .service-info {
+    grid-template-columns: 1fr;
+  }
+
+  .service-details-image {
+    height: 220px;
+  }
+}
+
+/* =========================
+   MY BOOKINGS
+========================= */
+
+.my-bookings-container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 40px 25px;
+  text-align: left;
+}
+
+.my-bookings-container > h1 {
+  text-align: center;
+  color: #222;
+  margin-bottom: 30px;
+}
+
+.booking-list {
+  display: grid;
+  gap: 20px;
+}
+
+.booking-card {
+  background: white;
+  border-radius: 12px;
+  padding: 25px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+  border: 1px solid #eee;
+}
+
+.booking-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+.booking-header h2 {
+  margin: 0;
+  color: #222;
+}
+
+.status {
+  padding: 7px 14px;
+  border-radius: 20px;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.status.confirmed {
+  background: #d1e7dd;
+  color: #146c43;
+}
+
+.status.pending {
+  background: #fff3cd;
+  color: #856404;
+}
+
+.status.cancelled {
+  background: #f8d7da;
+  color: #b02a37;
+}
+
+.booking-details {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 18px;
+}
+
+.booking-details div {
+  background: #f8f9fa;
+  padding: 14px;
+  border-radius: 8px;
+}
+
+.booking-details span {
+  display: block;
+  font-size: 12px;
+  color: #777;
+  margin-bottom: 5px;
+}
+
+.booking-details strong {
+  color: #222;
+  font-size: 14px;
+}
+
+.booking-details .total-amount {
+  background: #eef6ff;
+}
+
+.booking-details .total-amount strong {
+  color: #007bff;
+  font-size: 17px;
+}
+
+.pickup-drop {
+  margin-top: 18px;
+  padding: 12px;
+  background: #e8f5e9;
+  color: #198754;
+  border-radius: 8px;
+  font-weight: 600;
+}
+
+.instructions {
+  margin-top: 18px;
+  padding: 15px;
+  background: #f8f9fa;
+  border-radius: 8px;
+}
+
+.instructions p {
+  margin-top: 6px;
+  color: #555;
+}
+
+.no-bookings {
+  text-align: center;
+  padding: 50px;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+}
+
+@media (max-width: 800px) {
+  .booking-details {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 500px) {
+  .booking-details {
+    grid-template-columns: 1fr;
+  }
+
+  .booking-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
